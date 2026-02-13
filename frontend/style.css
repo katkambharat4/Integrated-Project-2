@@ -1,0 +1,379 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: url("court.webp") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(112, 106, 106, 0.6); 
+
+    z-index: -1;
+}
+
+/* HEADER */
+header {
+    background: navy;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+/* NAVIGATION */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn {
+    background: orange;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: gold;
+}
+
+/* STATS SECTION */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 200px;
+}
+
+/* SERVICES */
+.services {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    width: 250px;
+}
+
+/* ANNOUNCEMENT */
+.announcement {
+    background: #e3eafc;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* CASE TRACKING PAGE */
+.cases-hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cases-hero input {
+    padding: 8px;
+    width: 250px;
+    margin-top: 15px;
+}
+
+.cases-hero .btn {
+    margin-left: 10px;
+}
+
+/* CASE INFO */
+.case-info {
+    display: none;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    width: 200px;
+    text-align: center;
+}
+
+/* DASHBOARD */
+.dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px gray;
+    width: 200px;
+    text-align: center;
+}
+
+/* ABOUT PAGE */
+.about-section {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* FOOTER */
+footer {
+    background: #0d1b2a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+/* Active Navigation */
+nav a.active {
+    color: orange;
+    border-bottom: 2px solid orange;
+}
+
+/* About Page Styling */
+.about-main {
+    padding: 60px 20px;
+    animation: fadePage 0.6s ease-in-out;
+}
+
+/* Hero Section */
+.about-hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about-hero h2 {
+    font-size: 32px;
+    color: navy;
+}
+
+.about-hero p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Cards Layout */
+.about-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* 3D Card Effect */
+.about-card {
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    color: white;
+    padding: 25px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-card:hover {
+    transform: rotateY(10deg) translateY(-10px);
+    box-shadow: 0 25px 40px rgba(0,0,0,0.4);
+}
+
+/* Page Fade Animation */
+@keyframes fadePage {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Active Navigation Highlight */
+nav a.active {
+    color: orange;
+    border-bottom: 2px solid orange;
+}
+
+/* Login Section */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    animation: fadePage 0.8s ease-in-out;
+}
+
+/* Gradient Login Card */
+.login-card {
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    padding: 40px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 3D Hover Effect */
+.login-card:hover {
+    transform: rotateY(8deg) translateY(-8px);
+    box-shadow: 0 25px 40px rgba(0,0,0,0.4);
+}
+
+/* Inputs */
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 6px;
+}
+
+/* Smooth Fade Animation */
+@keyframes fadePage {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dashboard Page */
+.dashboard-main {
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadePage 0.6s ease-in-out;
+}
+
+.dashboard-title {
+    margin-bottom: 40px;
+    color: navy;
+}
+
+/* Cards Layout */
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* 3D Gradient Cards */
+.dashboard-card {
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+    color: white;
+    padding: 30px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.dashboard-card:hover {
+    transform: rotateY(8deg) translateY(-8px);
+    box-shadow: 0 25px 40px rgba(0,0,0,0.4);
+}
+.about-section,
+.dashboard-card,
+.login-card,
+.stat-box,
+.service-card {
+    background: rgba(7, 161, 156, 0.95);
+    color: black;
+}

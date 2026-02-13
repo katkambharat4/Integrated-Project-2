@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Case Tracking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="court.webp" class="logo" alt="Court Logo">
+        <h1>Indian Judicial Management System</h1>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="cases-hero">
+        <h2>Track Your Case</h2>
+        <p>Enter your case number to check the latest status</p>
+
+        <input type="text" id="caseInput" placeholder="Enter Case Number">
+        <button class="btn" onclick="searchCase()">Search</button>
+    </section>
+
+    <!-- Hidden Case Info -->
+    <section class="case-info" id="caseInfo" style="display: none;">
+        <div class="info-card">
+            <h3>Case Status</h3>
+            <p>In Progress</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Next Hearing Date</h3>
+            <p>25 March 2026</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Assigned Judge</h3>
+            <p>Justice R. Sharma</p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Government of India | Judicial System</p>
+</footer>
+
+<script>
+function searchCase() {
+    let caseNumber = document.getElementById("caseInput").value;
+    let caseInfo = document.getElementById("caseInfo");
+
+    if (caseNumber.trim() === "") {
+        alert("Please enter a valid case number.");
+        caseInfo.style.display = "none";
+    } else {
+        caseInfo.style.display = "flex";
+    }
+}
+</script>
+
+</body>
+</html>
