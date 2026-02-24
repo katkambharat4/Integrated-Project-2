@@ -377,3 +377,48 @@ nav a.active {
     background: rgba(7, 161, 156, 0.95);
     color: black;
 }
+/* Title Center */
+.services-title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 32px;
+    color: white;
+}
+
+/* Center Container */
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+/* Service Card Style */
+.service-card {
+    background: white;
+    color: black;
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Hover Effect */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Click Effect */
+.service-card:active {
+    transform: scale(0.95);
+}
+.service-card {
+    background-color: #2a5298;
+    color: white;
+}
